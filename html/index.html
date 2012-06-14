@@ -11,19 +11,19 @@
     <link href="../styles/application.css" rel="stylesheet" />
 </head>
 <body>
-    <div data-role="view" data-layout="mobile-layout" data-title="Analysis WorkBench for Mobile">
+    <div data-role="view" data-layout="mobile-layout" data-title="RISX-FACS Insight into Action">
     </div>
     
-    <div data-role="view" data-layout="mobile-layout" data-title="Analysis WorkBench for Mobile" id="home">
+    <div data-role="view" data-layout="mobile-layout" data-title="RISX-FACS Insight into Action | Home" id="home">
       <div id="content">
-        <h1>Analysis Workbench for Mobile POC</h1>
+        <h1>RISX-FACS Insight into Action for Mobile</h1>
       <br/>
       <img src="../images/gb_logo.png"/>
-      <h3>This POC is to demonstrate the capabilities of the Kendo mobile framework that we can leverage for AWB mobility. Some of the data visualizations that are available are listed below and are available via the footer bar below. Please feel free to play around with these visualizations</h3>
+      <h3>This POC is to demonstrate the capabilities of the Kendo mobile framework that we can leverage for AWB mobility. Access the different capabilities using the footer navigation bar below.</h3>
       <ul data-role="listview" data-style="inset">
-         <li><h3>Bar charts</h3></li>
-         <li><h3>Pie charts</h3></li>
-         <li><h3>Performance dashboards</h3></li>
+         <li><a data-role="listview-link"><h3>Gallagher Bassett News</h3></a></li>
+         <li><a data-role="listview-link"><h3>Industry News</h3></a></li>
+         <li><a data-role="listview-link"><h3>RISX-FACS News</h3></a></li>
       </ul>
       </div>
     </div>
@@ -38,9 +38,10 @@
     <footer data-role="footer">
         <div data-role="tabstrip">
             <a data-icon="organize" href="#home">Home</a>
-            <a data-icon="organize" href="">Bar Charts</a>
-            <a data-icon="organize" href="">Pie Charts</a>
-            <a data-icon="organize" href="">Dashboards</a>
+            <a data-icon="organize" href="">Operations</a>
+            <a data-icon="organize" href="">Performance</a>
+            <a data-icon="organize" href="">Insights</a>
+            <a data-icon="organize" href="">My Profile</a>
         </div>
     </footer>
 </div>
