@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AWB Mobile POC</title>
+    <script src="../js/jquery/jquery.min.js"></script>
+    <script src="../js/kendo/kendo.mobile.min.js"></script>
+    <script src="../js/application.js"></script>
+    <link href="../styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="../styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="../styles/application.css" rel="stylesheet" />
+</head>
+<body>
+    <div data-role="view" data-layout="mobile-layout" data-title="Analysis WorkBench for Mobile">
+    </div>
+    
+    <div data-role="view" data-layout="mobile-layout" data-title="Analysis WorkBench for Mobile" id="home">
+      <div id="content">
+        <h1>Analysis Workbench for Mobile POC</h1>
+      <br/>
+      <img src="../images/gb_logo.png"/>
+      <h3>This POC is to demonstrate the capabilities of the Kendo mobile framework that we can leverage for AWB mobility. Some of the data visualizations that are available are listed below and are available via the footer bar below. Please feel free to play around with these visualizations</h3>
+      <ul data-role="listview" data-style="inset">
+         <li><h3>Bar charts</h3></li>
+         <li><h3>Pie charts</h3></li>
+         <li><h3>Performance dashboards</h3></li>
+      </ul>
+      </div>
+    </div>
+
+<div data-role="layout" data-id="mobile-layout">
+    <header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+    
+    <footer data-role="footer">
+        <div data-role="tabstrip">
+            <a data-icon="organize" href="#home">Home</a>
+            <a data-icon="organize" href="">Bar Charts</a>
+            <a data-icon="organize" href="">Pie Charts</a>
+            <a data-icon="organize" href="">Dashboards</a>
+        </div>
+    </footer>
+</div>
+
+<script>
+   window.kendoMobileApplication = new kendo.mobile.Application(document.body);
+</script>
+</body>
+</html>
