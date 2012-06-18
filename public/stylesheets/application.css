@@ -1,3 +1,24 @@
 #content {
   text-align: center;
 }
+#chart1 {
+	margin-left: auto;
+	margin-right: auto;
+}
+#chart2 {
+	margin-left: auto;
+	margin-right: auto;
+}
+#chart3 {
+	margin-left: auto;
+	margin-right: auto;
+}
+#chart4 {
+	margin-left: auto;
+	margin-right: auto;
+}
+#grid1 {
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
