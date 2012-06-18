@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.2'
-gem 'sqlite3'
 gem 'jquery-rails'
 gem 'heroku'
 gem 'pg'
@@ -18,6 +17,7 @@ group :development do
   gem 'letter_opener'
   gem "awesome_print"
   gem 'active_reload'
+  gem 'sqlite3'
 end
 
 
