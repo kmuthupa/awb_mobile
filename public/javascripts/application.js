@@ -38,15 +38,15 @@ $(document).ready(function(){
 	$("#grid1").kendoGrid({
 		theme: 'blueOpal',
 		dataSource: {
-			 data: [{Accidenttype: "Leg Injury", Claimcount: 6300, Totalincurred: 145000, Totalpaid: 200000},
-		            {Accidenttype: "Alleged food poisoning", Claimcount: 1300, Totalincurred: 240000, Totalpaid: 280000},
-		            {Accidenttype: "Exertion - Lifting", Claimcount: 2500, Totalincurred: 180000, Totalpaid: 130000},
-		            {Accidenttype: "Ingestion of substance", Claimcount: 2800, Totalincurred: 405000, Totalpaid: 430000},
-		            {Accidenttype: "Contact with sharp objects", Claimcount: 4300, Totalincurred: 45000, Totalpaid: 18000},
-		            {Accidenttype: "Contact with metal objects", Claimcount: 4300, Totalincurred: 45000, Totalpaid: 18000},
-		            {Accidenttype: "Exertion - pulling", Claimcount: 4300, Totalincurred: 45000, Totalpaid: 18000},
-		            {Accidenttype: "Contact with hot substances", Claimcount: 4300, Totalincurred: 45000, Totalpaid: 18000}],
-		     pageSize: 10
+			data: [{Accidenttype: "Leg Injury", Claimcount: 6300, Totalincurred: 145000, Totalpaid: 200000},
+			{Accidenttype: "Alleged food poisoning", Claimcount: 1300, Totalincurred: 240000, Totalpaid: 280000},
+			{Accidenttype: "Exertion - Lifting", Claimcount: 2500, Totalincurred: 180000, Totalpaid: 130000},
+			{Accidenttype: "Ingestion of substance", Claimcount: 2800, Totalincurred: 405000, Totalpaid: 430000},
+			{Accidenttype: "Contact with sharp objects", Claimcount: 1300, Totalincurred: 15000, Totalpaid: 17000},
+			{Accidenttype: "Contact with metal objects", Claimcount: 5600, Totalincurred: 101000, Totalpaid: 118000},
+			{Accidenttype: "Exertion - pulling", Claimcount: 4100, Totalincurred: 35000, Totalpaid: 13000},
+			{Accidenttype: "Contact with hot substances", Claimcount: 2200, Totalincurred: 145000, Totalpaid: 128000}],
+			pageSize: 10
 		},
 		pageable: true,
 		filterable: true,
@@ -72,24 +72,26 @@ $(document).ready(function(){
 		]
 	});
 
-	$("#chart4").kendoChart({
+	$("#chart5").kendoChart({
 		theme: "blueOpal",
 		title: {
-			text: "Average Claim Lag Days"
+			text: "Accident vs Claim count for the last 5 years (thousands)"
 		},
 		legend: {
 			position: "bottom"
 		},
+		chartArea: {
+			background: ""
+		},
 		seriesDefaults: {
-			type: "bar",
-			stack: true
+			type: "line"
 		},
 		series: [{
-			name: "Reported to Setup Lag",
-			data: [50, 10, 50, 40, 20, 30]
+			name: "Accident",
+			data: [157, 167, 200, 235, 266]
 		}, {
-			name: "Accident to Vendor Lag",
-			data: [50, 70, 80, 60, 100, 80]
+			name: "Claim",
+			data: [100, 120, 150, 187, 243]
 			}],
 			valueAxis: {
 				labels: {
@@ -97,7 +99,7 @@ $(document).ready(function(){
 				}
 			},
 			categoryAxis: {
-				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+				categories: [2008, 2008, 2009, 2010, 2011]
 			},
 			tooltip: {
 				visible: true,
@@ -105,43 +107,76 @@ $(document).ready(function(){
 			}
 		});
 
-		$("#chart3").kendoChart({
+		$("#chart4").kendoChart({
+			theme: "blueOpal",
 			title: {
-				text: "Claims per business unit in 2011"
+				text: "Average Claim Lag Days"
 			},
 			legend: {
 				position: "bottom"
 			},
 			seriesDefaults: {
-				labels: {
-					visible: true,
-					format: "{0}%"
-				}
+				type: "bar",
+				stack: true
 			},
 			series: [{
-				type: "pie",
-				data: [{
-					category: "Florida",
-					value: 22
-				}, {
-					category: "Northwest",
-					value: 2
-				}, {
-					category: "South",
-					value: 49
-				}, {
-					category: "Central",
-					value: 13
-				}, {
-					category: "Midwest",
-					value: 14
-					}]
-					}],
-					tooltip: {
+				name: "Reported to Setup Lag",
+				data: [50, 10, 50, 40, 20, 30]
+			}, {
+				name: "Accident to Vendor Lag",
+				data: [50, 70, 80, 60, 100, 80]
+				}],
+				valueAxis: {
+					labels: {
+						format: "{0}"
+					}
+				},
+				categoryAxis: {
+					categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+				},
+				tooltip: {
+					visible: true,
+					format: "{0}"
+				}
+			});
+
+			$("#chart3").kendoChart({
+				title: {
+					text: "Claims per business unit in 2011"
+				},
+				legend: {
+					position: "bottom"
+				},
+				seriesDefaults: {
+					labels: {
 						visible: true,
-						format: "{0:N0}"
-					},
-					theme: 'blueOpal'
-				});
-			})
+						format: "{0}%"
+					}
+				},
+				series: [{
+					type: "pie",
+					data: [{
+						category: "Florida",
+						value: 22
+					}, {
+						category: "Northwest",
+						value: 2
+					}, {
+						category: "South",
+						value: 49
+					}, {
+						category: "Central",
+						value: 13
+					}, {
+						category: "Midwest",
+						value: 14
+						}]
+						}],
+						tooltip: {
+							visible: true,
+							format: "{0:N0}"
+						},
+						theme: 'blueOpal'
+					});
+				})
 
