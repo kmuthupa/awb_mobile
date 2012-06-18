@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.2'
 gem 'sqlite3'
+gem 'jquery-rails'
+gem 'heroku'
+gem 'pg'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -9,5 +12,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :development do
+  gem 'letter_opener'
+  gem "awesome_print"
+  gem 'active_reload'
+end
+
 
