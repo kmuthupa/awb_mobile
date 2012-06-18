@@ -5,6 +5,8 @@ gem 'sqlite3'
 gem 'jquery-rails'
 gem 'heroku'
 gem 'pg'
+gem 'em-http-request'
+gem "thin"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
